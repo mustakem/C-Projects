@@ -1,0 +1,90 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int t=0;
+    int l=0;
+    int b=0;
+    
+    int user_input;
+    int amount=0, count=0;
+    
+    while(true)
+    {
+    cout<<"What kind of Vehicle do you want to park?We have only 3 types of car parking facilities here:- "<<endl;
+    cout<<"A:-Big Truck For $15"<<endl;
+    cout<<"B:-Lorry For $14"<<endl;
+    cout<<"C:-Bus For $12"<<endl;
+    cout<<"------------"<<endl;
+    
+    cout<<"Type '1' for Big Truck"<<endl;
+    cout<<"Type '2' for Lorry"<<endl;
+    cout<<"Type '3' for Bus"<<endl;
+    cout<<"Type '4' for View Your Database"<<endl;
+    cout<<"Type '5' for Delete Your Database"<<endl;
+    cout<<"Enter Your Vehicle here..."<<endl;
+    cout<<"------------"<<endl;
+    cin>>user_input;
+    
+    //for truck
+    if(user_input==1){
+        if(count<=150){
+        t++;
+        amount = amount + 15;
+        count = count + 1;
+    }else{
+        cout<<"Vahicle Limit Over!"<<endl;
+    }
+}
+    //for Lorry
+     else if(user_input==2){
+        if(count<=150){
+        l++;
+        amount = amount + 14;
+        count = count + 1;
+    }else{
+        cout<<"Vahicle Limit Over!"<<endl;
+    }
+}
+    //for bus
+     else if(user_input==3){
+        if(count<=150){
+        b++;
+        amount = amount + 12;
+        count = count + 1;
+    }
+}
+     //for View data
+     else if(user_input==4){
+        cout<<"<<<--------------------------------->>>"<<endl;
+        cout<<"The Total Amount = $"<<amount<<endl;
+        cout<<"The Total Number of Vahicle Parked = "<<count<<endl;
+        cout<<"<<<--------------------------------->>>"<<endl;
+        cout<<"The Total Number of Big-Truck Parked = "<<t<<endl;
+        cout<<"The Total Number of Lorry Parked = "<<l<<endl;
+        cout<<"The Total Number of Buses Parked = "<<b<<endl;
+        cout<<"<<<--------------------------------->>>"<<endl;
+    }
+    
+     //for Delete Data
+     else if(user_input==5){
+        cout<<"Are you Sure Want to Delete Your Data? Type 'Double 1' for yes otherwise type 12"<<endl;
+        cout<<"<<<--------------------------------->>>"<<endl;
+    }else if(user_input==11){
+        amount = 0;
+        count = 0;
+        cout<<"<<< Record Deleted>>>"<<endl;
+    }
+    else if(user_input==12){
+        cout<<"<<<Thanks For Co-operate>>>"<<endl;
+    }
+    else{
+        cout<<"Please Contact Your Developer...@mustakeem.world@gmail.com"<<endl;
+    }
+    
+    }
+    return 0;
+}
